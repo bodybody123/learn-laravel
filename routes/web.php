@@ -16,3 +16,26 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/hello', function () {
+    $data = [
+        [
+            "title" => "What to buy",
+            "description" => [
+                "Eggs",
+                "Milk",
+                "Cereal"
+            ],
+        ],
+        [
+            "title" => "Weekend activities",
+            "description" => [
+                "Do nothing and sleep tight"
+            ]
+        ]
+    ];
+
+    return view('hello', ["data"=>$data, "profile"=> [
+        "name"=>"bodybody"
+    ]]);
+});
