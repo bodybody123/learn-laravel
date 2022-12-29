@@ -4,7 +4,12 @@ module.exports = {
     "./resources/**/*.blade.php",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        noteGreen: "#94b32e",
+        noteRed: "#be503d"
+      }
+    },
   },
   plugins: [],
 }
